@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Signature du document</mat-card-title>
+    </mat-card-header>
+    <mat-card-content id="container">
+      <div class="example-ripple-container mat-elevation-z4" matRipple (click)="file.click()">
+        <input type="file" accept="image/*" (change)="uploadDoc(file.files)" #file />
+        <mat-icon color="primary">description</mat-icon>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<button *ngIf="docLoaded && !signatureLoaded" mat-fab class="fixed-fab" color="primary" (click)="file2.click()">
+  <input type="file" accept="image/*" (change)="uploadSignature(file2.files)" #file2 />
+  <mat-icon>gesture</mat-icon>
+</button>
+<button *ngIf="signatureLoaded" mat-fab class="fixed-fab" color="primary" (click)="sign()">
+  <mat-icon>done</mat-icon>
+</button>

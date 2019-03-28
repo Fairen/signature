@@ -1,0 +1,14 @@
+{
+  "name": "Sign-It",
+  "short_name": "Sign-It",
+  "theme_color": "#488aff",
+  "background_color": "#488aff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/ngx-rocket-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
